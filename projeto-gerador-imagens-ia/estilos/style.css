@@ -128,7 +128,7 @@ main{
         &::before{
             content:"# ";
             color: var(--button);
-            font-style: italic;
+            
         }
     }
 
