@@ -22,9 +22,10 @@ body {
     --container-size: 5rem;
     --background: #f3f3f3;
     --foreground: #123;
-    --button: #9c9dd6;
-    --button-hover: #7c7db6;
+    --button: #a48df8;
+    --button-hover: #7a5bf8;
     --border-color: #0005;
+    --border-color-hover: #0009;
     --purple: #7a5bf8;
 }
 
@@ -119,9 +120,17 @@ header {
 }
 
 main{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     height: calc(100% - 5rem);
     padding: 1rem 1rem 1rem calc(var(--container-size) + 1rem);
+
+    .container{
+        width: 60%;
+    }
 
     h1{
         padding: 1rem 0.25rem;
@@ -143,4 +152,69 @@ main{
 
 .bi{
     font-size: calc(var(--container-size) - 3.5rem);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+
+    tbody{
+        width: 100%;
+        border: 0px solid var(--border-color);
+        outline: none;
+    }
+
+    td, th{
+        padding: 0.5rem;
+    }
+}
+
+form{
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+    max-width: 100%;
+    border: 1px solid var(--border-color);
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 2rem;
+
+    input, button{
+        width: 100%;
+    }
+}
+
+input, textarea, button{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    outline: none;
+    background-color: var(--background);
+}
+
+input{
+    &:focus{
+        border: 1px solid var(--border-color-hover);
+    }
+}
+
+button{
+    background-color: var(--button);
+    cursor: pointer;
+
+    &:hover{
+        background-color: var(--button-hover);
+    }
+}
+
+.container-contact{
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+
+    a{
+        color: var(--foreground);
+    }
 }

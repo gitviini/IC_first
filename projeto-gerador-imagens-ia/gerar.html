@@ -26,15 +26,18 @@
         </nav>
     </header>
     <main>
-        <h1>Gerador de Imagens</h1>
-        <article>
-            <h2>Step-by-step</h2>
-            <p>Nesta página você pode gerar imagens a partir de uma descrição (prompt)</p>
-            <ol>
-                <li>Excreva um prompt dentro do campo de prompts</li>
-                <li>Agora é só enviar e criar suas imagens 😎</li>
-            </ol>
-        </article>
+        <div class="container">
+            <h1>Gerador de Imagens</h1>
+            <form action="#">
+                <h2>Descreva a imagem desejada</h2>
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" name="descricao" placeholder="Detalhes da imagem que deseja criar" required>
+                <button type="submit">Gerar</button>
+            </form>
+
+            <h3>Imagem Gerada</h3>
+            <img src="https://picsum.photos/400/200" alt="Imagem gerada" id="imagem-gerada">
+        </div>
     </main>
 </body>
 
