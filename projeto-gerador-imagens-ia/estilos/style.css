@@ -59,7 +59,7 @@ header {
             justify-content: flex-start;
             align-items: center;
             padding: 1rem 0;
-            gap: 1.5rem;
+            gap: 1rem;
 
             .container-logo {
                 display: flex;
@@ -202,6 +202,7 @@ main {
     }
 
     h1 {
+        font-size: clamp(22px, 5vw, 30px);
         padding: 1rem 0.25rem;
         line-height: 2rem;
 
@@ -224,7 +225,7 @@ main {
 }
 
 .bi {
-    font-size: calc(var(--container-size) - 3.5rem);
+    font-size: 1.5rem;
 }
 
 .row{
@@ -322,10 +323,23 @@ button {
     }
 }
 
-@media screen and (max-height:540px) {
+@media screen and (max-width: 600px){
+    main {
+        .container-header > .container-title{
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+        }
+    }
     body{
         display: flex;
         flex-direction: column;
+    }
+
+    .bi{
+        font-size: clamp(1rem, 5vw, 1.5rem);
     }
 
     header{
@@ -339,6 +353,7 @@ button {
         nav > ul{
             flex-direction: row;
             justify-content: center;
+            gap: 0.25rem;
 
             li span {
                 display: flex;
@@ -360,17 +375,5 @@ button {
         min-height: calc(100% - var(--container-size));
         overflow-y: auto;
         margin-left: unset;
-    }
-}
-
-@media screen and (max-width:800px) {
-    main {
-        .container-header > .container-title{
-            width: 100%;
-        }
-
-        .container {
-            width: 100%;
-        }
     }
 }
